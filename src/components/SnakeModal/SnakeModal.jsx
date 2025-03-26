@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SnakeGame from "./SnakeGame";
 import "./SnakeModal.css";
 
-const countdownSound = new Audio("/sounds/beep.mp3");
+// const countdownSound = new Audio("/sounds/beep.mp3");
 
 const SnakeModal = () => {
   const [isOpen, setIsOpen] = useState(false);

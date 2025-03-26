@@ -99,7 +99,7 @@ const Contact = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="../../public/logos/email.svg" alt="Email" />
+          <img src={`${import.meta.env.BASE_URL}logos/email.svg`} alt="Email" />
         </a>
         <a
           title="GitHub"
@@ -107,7 +107,10 @@ const Contact = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="../../public/logos/github.svg" alt="GitHub" />
+          <img
+            src={`${import.meta.env.BASE_URL}logos/github.svg`}
+            alt="GitHub"
+          />
         </a>
         <a
           title="LinkedIn"
@@ -115,10 +118,13 @@ const Contact = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="../../public/logos/linkedin.svg" alt="LinkedIn" />
+          <img
+            src={`${import.meta.env.BASE_URL}logos/linkedin.svg`}
+            alt="LinkedIn"
+          />
         </a>
         <a title="Resume" href="/resume.pdf" target="_blank" rel="noreferrer">
-          <img src="../../public/logos/cv.svg" alt="Resume" />
+          <img src={`${import.meta.env.BASE_URL}logos/cv.svg`} alt="Resume" />
         </a>
       </div>
     </section>

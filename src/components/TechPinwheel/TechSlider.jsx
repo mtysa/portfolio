@@ -23,7 +23,7 @@ const TechSlider = () => {
         {techLogos.concat(techLogos).map((logo, index) => (
           <div className="slider-item" key={index} title={logo.toUpperCase()}>
             <img
-              src={`/logos/${logo}.svg`}
+              src={`${import.meta.env.BASE_URL}logos/${logo}.svg`}
               alt={logo}
               className="slider-icon"
             />
