@@ -37,7 +37,7 @@ const SnakeModal = () => {
   useEffect(() => {
     let timer;
     if (isOpen && countdown > 0) {
-      countdownSound.play();
+      // countdownSound.play();
       timer = setTimeout(() => setCountdown((prev) => prev - 1), 1000);
     } else if (isOpen && countdown === 0) {
       setGameStarted(true);
