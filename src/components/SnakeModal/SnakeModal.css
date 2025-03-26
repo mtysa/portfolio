@@ -1,0 +1,270 @@
+.modal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-content {
+  width: 500px;
+  height: 650px;
+  background-color: #0f172a; /* ✅ Restore this */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner spacing for flow */
+.modal-content > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* Ensure modal content is spaced vertically if needed */
+.modal-content .countdown,
+.modal-content .start-game-btn,
+.modal-content .game-over-message,
+.modal-content .quit-game-btn,
+.modal-content .touch-controls {
+  margin-top: 12px;
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90vw;
+    height: 90vh;
+    max-width: 450px;
+    max-height: 650px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95vw;
+    height: 90vh;
+    max-width: 400px;
+    max-height: 620px;
+    padding: 16px;
+  }
+
+  .touch-btn {
+    font-size: 32px;
+    padding: 14px;
+  }
+
+  .quit-game-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  display: inline-block;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 28px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #10b981;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.toggle-label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: #111827;
+  margin-top: 8px;
+}
+
+.countdown {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.countdown-number {
+  font-size: 4rem;
+  color: white;
+  animation: pop 0.3s ease-in-out;
+}
+
+.start-game-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.start-game-btn:hover {
+  background-color: #059669;
+}
+
+.quit-game-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.quit-game-btn:hover {
+  background-color: #dc2626;
+}
+
+.game-over-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f87171;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.touch-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  margin-top: 16px;
+}
+
+.horizontal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.touch-btn {
+  font-size: 36px;
+  padding: 16px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.touch-btn:active {
+  transform: scale(0.95);
+}
+
+.modal-inner.centered {
+  background: none; /* Prevent this from overwriting */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Centers the Game Over + Start/Restart Button */
+.game-over-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Adds horizontal spacing and centers direction arrows better */
+.horizontal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* increased gap */
+  position: relative;
+}
+
+/* Optional: Placeholder div can help space the arrow buttons more evenly */
+.touch-btn-placeholder {
+  width: 20px;
+  height: 1px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

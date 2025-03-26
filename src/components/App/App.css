@@ -1,0 +1,9 @@
+.page__content {
+  padding: 0 80px;
+  font-family: "Roboto", arial, sans-serif;
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}

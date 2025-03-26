@@ -1,0 +1,45 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 60px 0 60px;
+  gap: 24px;
+  text-align: center;
+}
+
+.about__image {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about__bio {
+  max-width: 700px;
+}
+
+.about__title {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #111827;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about__bio {
+    margin-left: 32px;
+  }
+}

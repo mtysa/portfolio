@@ -1,0 +1,61 @@
+main {
+  padding-top: 80px; /* adjust based on your navbar height */
+}
+
+.solutions-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 65px auto 0px;
+  padding: 32px;
+  color: #111827;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.technologies-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 60px auto 10px;
+  color: #111827;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 24px 0 40px;
+}
+
+.main-btn {
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-btn:hover {
+  background-color: #1e40af;
+}
+
+.main-btn.outline {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.main-btn.outline:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
